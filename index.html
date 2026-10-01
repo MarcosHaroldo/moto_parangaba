@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Moto Parangaba - Simulador de corrida</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Moto Parangaba</h1>
+            <p>Corridas rápidas a partir da UNINASSAU</p>
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="inicio">
+
+            <h2>Simule sua corrida de moto</h2>
+
+            <p>
+                Informe o CEP do destino para consultar o endereço
+                e ver uma estimativa da corrida.
+            </p>
+
+        </section>
+
+
+        <section class="calculadora">
+
+            <h2>Para onde vamos?</h2>
+
+            <div class="origem">
+                <span>Partida</span>
+                <strong>UNINASSAU Parangaba</strong>
+                <p>Rua Germano Franck, Parangaba - Fortaleza/CE, 60740-020</p>
+            </div>
+
+            <form id="formFrete">
+
+                <label for="cep">CEP do destino</label>
+
+                <div class="cep-area">
+
+                    <input type="text" id="cep" placeholder="Ex: 60000-000" maxlength="9" required>
+
+                    <button type="submit">
+                        Consultar corrida
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <div id="carregando" class="mensagem">
+                Buscando destino...
+            </div>
+
+
+            <div id="resultado" class="resultado">
+
+                <h3>Destino localizado</h3>
+
+                <p>
+                    <strong>CEP:</strong>
+                    <span id="resultadoCep"></span>
+                </p>
+
+                <p>
+                    <strong>Rua:</strong>
+                    <span id="resultadoRua"></span>
+                </p>
+
+                <p>
+                    <strong>Bairro:</strong>
+                    <span id="resultadoBairro"></span>
+                </p>
+
+                <p>
+                    <strong>Cidade:</strong>
+                    <span id="resultadoCidade"></span>
+                </p>
+
+                <p>
+                    <strong>Estado:</strong>
+                    <span id="resultadoEstado"></span>
+                </p>
+
+
+                <div class="frete">
+
+                    <h3>Estimativa da corrida</h3>
+
+                    <div class="informacao">
+                        <span>Distância estimada</span>
+                        <strong id="distancia">-- km</strong>
+                    </div>
+
+                    <div class="informacao">
+                        <span>Valor de referência por km</span>
+                        <strong id="valorKm">R$ 2,50</strong>
+                    </div>
+
+                    <div class="informacao total">
+                        <span>Valor estimado da corrida</span>
+                        <strong id="valorFrete">R$ 0,00</strong>
+                    </div>
+
+                </div>
+
+                <p class="aviso">Distância e preço são estimativas ilustrativas do projeto, não uma tarifa oficial nem
+                    uma rota calculada em tempo real.</p>
+
+            </div>
+
+
+            <div id="erro" class="erro">
+                CEP não encontrado.
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+        <p>
+            © 2026 Moto Parangaba - Simulação acadêmica, sem vínculo com a Uber.
+        </p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
